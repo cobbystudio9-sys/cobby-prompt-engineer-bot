@@ -94,10 +94,9 @@ def setup():
         return "BOT_TOKEN is missing.", 500
 
     webhook_url = (
-        "https://cobby-prompt-engineer-65ztfymqc-cobbystudio9-sys.vercel.app"
-        "/api/webhook"
+    "https://cobby-prompt-engineer-bot.vercel.app"
+    "/api/webhook"
     )
-
     response = requests.post(
         f"{TELEGRAM_API}/setWebhook",
         json={"url": webhook_url},
