@@ -241,12 +241,12 @@ def webhook():
 
     except Exception as e:
 
-        print("Gemini error:", str(e))
+    print("Gemini error:", str(e))
 
-        reply = (
-            "⚠️ Sorry, I couldn't generate the prompt right now.\n\n"
-            "Please try again in a moment."
-        )
+    reply = (
+        "⚠️ Gemini error:\n\n"
+        + str(e)
+    )
 
     send_message(chat_id, reply)
 
